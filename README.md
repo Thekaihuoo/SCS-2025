@@ -21,11 +21,8 @@ View your app in AI Studio: https://ai.studio/apps/drive/1SvwH6CySoAbgHVP7qLve3A
 
 
 
+
 Prompt
-ได้เลยครับ ผมได้ปรับปรุง **Prompt ฉบับสมบูรณ์** ให้รองรับการประเมินครบทั้ง **3 ด้าน (3 Aspects)** ตามมาตรฐานระบบดูแลช่วยเหลือนักเรียนของไทย (SDQ, EQ, และการคัดกรองความเสี่ยง) พร้อมอัปเดตรหัส Admin เป็น `0000` เรียบร้อยครับ
-
-คุณสามารถนำ Prompt ด้านล่างนี้ไปสั่ง AI ได้เลยครับ
-
 ---
 
 ### **Prompt: ระบบดูแลช่วยเหลือนักเรียน 3 ด้าน (Student Care System - Full Option)**
