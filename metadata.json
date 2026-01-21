@@ -1,0 +1,7 @@
+{
+  "name": "Student Care System 2025",
+  "description": "A comprehensive student care and support system featuring SDQ, EQ, and Risk screenings with a warm and professional UI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
