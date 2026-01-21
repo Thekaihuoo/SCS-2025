@@ -73,6 +73,20 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #cbd5e1;
         }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+            }
+            .glass-card {
+                box-shadow: none !important;
+                border: 1px solid #eee !important;
+                backdrop-filter: none !important;
+            }
+        }
     </style>
 <script type="importmap">
 {
@@ -89,5 +103,7 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Entry point for the application -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
