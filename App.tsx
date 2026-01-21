@@ -45,11 +45,11 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="flex min-h-screen bg-[#F3F6F9]">
+      <div className={`flex min-h-screen ${!user ? 'login-vibrant-bg' : 'bg-[#F3F6F9]'}`}>
         {user && <Sidebar user={user} onLogout={handleLogout} />}
         <main className={`flex-1 overflow-auto transition-all duration-300 ${user ? 'md:ml-72' : ''}`}>
-          <div className="p-4 md:p-8 max-w-7xl mx-auto flex flex-col min-h-full">
-            <div className="flex-1">
+          <div className="p-4 md:p-8 max-w-7xl mx-auto flex flex-col min-h-screen">
+            <div className="flex-1 flex flex-col">
               <Routes>
                 <Route 
                   path="/login" 
@@ -83,17 +83,17 @@ const App: React.FC = () => {
               </Routes>
             </div>
             
-            {/* Footer Component */}
-            {user && (
-              <footer className="mt-12 pt-8 pb-4 border-t border-gray-200 text-center">
-                <p className="text-[16px] font-bold text-gray-800">
+            {/* Global Footer - Visible on all pages including Login */}
+            <footer className={`mt-12 pt-8 pb-8 text-center ${!user ? '' : 'border-t border-gray-200'}`}>
+              <div className={`${!user ? 'bg-white/20 backdrop-blur-md' : 'bg-white/60'} inline-block px-8 py-3 rounded-2xl shadow-lg border border-white/20`}>
+                <p className={`text-[16px] font-black tracking-tight ${!user ? 'text-white drop-shadow-lg' : 'text-gray-900'}`}>
                   Freeman @ Cpoy Right Krukai ฝากแชร์ ฝากติดตามด้วยนะครับ
                 </p>
-                <div className="mt-2 text-[10px] text-gray-400 font-medium uppercase tracking-widest">
-                  © 2025 Student Care System - Built with Excellence
-                </div>
-              </footer>
-            )}
+              </div>
+              <div className={`mt-3 text-[10px] font-bold uppercase tracking-[0.2em] ${!user ? 'text-white/80 drop-shadow-sm' : 'text-gray-400'}`}>
+                © 2025 Student Care System • Built with Excellence
+              </div>
+            </footer>
           </div>
         </main>
       </div>
